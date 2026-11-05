@@ -23,21 +23,6 @@ proxies:
   udp: true
 - name: '🇫🇮[Bomzh]Finland #1'
   type: vless
-  server: 122.8.47.4
-  port: 8443
-  uuid: ffaa2141-759b-424f-f28c-23dbeae00f10
-  udp: true
-  tls: true
-  servername: www.philips.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: Sq7mtLmaanwsTVNBR9gU7ECU87ftrb_wFGRLLNRBlmQ
-    short-id: ''
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TunService
-- name: '🇫🇮[Bomzh]Finland #2'
-  type: vless
   server: 193.233.199.84
   port: 443
   uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
@@ -49,22 +34,6 @@ proxies:
   reality-opts:
     public-key: 1ONSjyJWD3lAomwIqFmmzb6lAhg077bvMJ7rGJCDk0g
     short-id: 38559e47f5536913
-- name: '🇫🇮[Bomzh]Finland #3'
-  type: vless
-  server: latvia.zovip2.ir
-  port: 443
-  uuid: 5a79e684-54c8-44c0-807a-225f9ea8c0ed
-  udp: true
-  tls: true
-  servername: nova.zovip2.ir
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /api/v3/pulse
-    headers:
-      Host: nova.zovip2.ir
 - name: '🇫🇷[Bomzh]France #1'
   type: vless
   server: w.geogame.ir
@@ -73,124 +42,132 @@ proxies:
   udp: true
   tls: true
   client-fingerprint: chrome
-- name: '🇫🇷[Bomzh]France #2'
-  type: trojan
-  server: fr001.zestapp778.com
-  port: 16778
-  password: 5t6i121em5lkmsmk
-  udp: true
-  client-fingerprint: chrome
 - name: '🇩🇪[Bomzh]Germany #1'
+  type: vless
+  server: 13.143.192.200
+  port: 443
+  uuid: caedb3a1-6395-40b9-a9a8-4b9694eb224a
+  udp: true
+  flow: xtls-rprx-vision-udp443
+  tls: true
+  servername: kulek.tech
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: gOzBi_a99jyGQyM5tVwDpi7EQ_3eaj-v15mHOTs9xkY
+    short-id: ''
+- name: '🇩🇪[Bomzh]Germany #2'
+  type: vless
+  server: 31.76.83.1
+  port: 443
+  uuid: caedb3a1-6395-40b9-a9a8-4b9694eb224a
+  udp: true
+  flow: xtls-rprx-vision-udp443
+  tls: true
+  servername: www.rimi.lv
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 0ucabP76F6UHGAAoi73bxlt6ugwqoRDoLAW5n39pezU
+    short-id: ''
+- name: '🇩🇪[Bomzh]Germany #3'
+  type: vless
+  server: 31.76.62.158
+  port: 443
+  uuid: caedb3a1-6395-40b9-a9a8-4b9694eb224a
+  udp: true
+  flow: xtls-rprx-vision-udp443
+  tls: true
+  servername: www.maxima.lv
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: q97mUwRiZeygHgoRa6PJHDamhGS5lrMMB0zh6qFY6gk
+    short-id: ''
+- name: '🇩🇪[Bomzh]Germany #4'
+  type: ss
+  server: 45.86.158.154
+  port: 8044
+  cipher: chacha20-ietf-poly1305
+  password: dCamglzrORaopqbpBlptzbt9QdiH4CSN
+  udp: true
+- name: '🇩🇪[Bomzh]Germany #5'
   type: ss
   server: 18.196.58.183
   port: 443
   cipher: aes-256-cfb
   password: amazonskr05
   udp: true
-- name: '🇩🇪[Bomzh]Germany #2'
-  type: vless
-  server: 104.16.0.1
-  port: 2052
-  uuid: 5744e593-1cc8-48fa-b8ca-57cd494fe35b
-  udp: true
-  network: ws
-  ws-opts:
-    path: /rain1226
-    headers:
-      Host: eu02.123450908.xyz
-- name: '🇩🇪[Bomzh]Germany #3'
-  type: vless
-  server: 104.26.0.1
-  port: 2052
-  uuid: 5744e593-1cc8-48fa-b8ca-57cd494fe35b
-  udp: true
-  network: ws
-  ws-opts:
-    path: /rain1226
-    headers:
-      Host: eu02.123450908.xyz
-- name: '🇩🇪[Bomzh]Germany #4'
-  type: vless
-  server: 172.64.150.43
-  port: 2052
-  uuid: 5744e593-1cc8-48fa-b8ca-57cd494fe35b
-  udp: true
-  network: ws
-  ws-opts:
-    path: /rain1226
-    headers:
-      Host: eu02.123450908.xyz
-- name: '🇩🇪[Bomzh]Germany #5'
-  type: vless
-  server: latvia.zovip2.ir
-  port: 443
-  uuid: 5a79e684-54c8-44c0-807a-225f9ea8c0ed
-  udp: true
-  tls: true
-  servername: media.zovip2.ir
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /api/v3/pulse
-    headers:
-      Host: media.zovip2.ir
 - name: '🇭🇰[Bomzh]Hong Kong #1'
   type: vmess
-  server: 156.245.232.239
-  port: 35043
-  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
+  server: vipccc.cc
+  port: 443
+  uuid: 5bead32f-a987-4f57-b1a8-6698778facda
   alterId: 0
   cipher: auto
   udp: true
+  tls: true
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /
+    path: /ray_proxy
     headers:
-      Host: www.pubgmobile.com
+      Host: vipccc.cc
 - name: '🇭🇰[Bomzh]Hong Kong #2'
-  type: vless
-  server: 57d89862-2f3e-4b36-bf20-bf5d302eeaa6.69290827-acbd-4035-94cd-4d1fa0997bb8.byteprivatelink.com
-  port: 443
-  uuid: c7099d28-9806-4206-b8ce-0f8f9b496b45
+  type: vmess
+  server: dog-hk.kunlun01dns.com
+  port: 21020
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
   udp: true
-  flow: xtls-rprx-vision-udp443
-  tls: true
-  servername: tva1.sinaimg.cn
-  client-fingerprint: ios
-  reality-opts:
-    public-key: rV6kc94WuI-e8k94iQ8l8SHTvTynTjtd8io7LDByEnc
-    short-id: e5b9c61d
 - name: '🇭🇰[Bomzh]Hong Kong #3'
   type: vmess
   server: dog-hk.kunlun01dns.com
-  port: 21019
+  port: 21021
   uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
   alterId: 0
   cipher: auto
   udp: true
-- name: '🇭🇰[Bomzh]Hong Kong #4'
+- name: '🇯🇵[Bomzh]Japan #1'
   type: vmess
-  server: dog-hk.kunlun01dns.com
-  port: 21022
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  server: 162.159.135.234
+  port: 2083
+  uuid: ac251237-576f-40c8-a543-554960c958b1
   alterId: 0
   cipher: auto
   udp: true
-- name: '🇮🇳[Bomzh]India #1'
+  tls: true
+  servername: cdn.sfacg.uk
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /or3
+    headers:
+      Host: or3.sfacg.uk
+- name: '🇰🇿[Bomzh]Kazakhstan #1'
   type: vless
-  server: in1.japancase.site
+  server: kz1.japancase.site
   port: 443
   uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
   udp: true
   flow: xtls-rprx-vision-udp443
   tls: true
-  servername: in1.japancase.site
+  servername: kz1.japancase.site
   client-fingerprint: firefox
   reality-opts:
-    public-key: lDBwW08dYwPP-7dVxYQ_clzfFwsDHLlclz9K2cEV6DM
-    short-id: df7b054cfc29800c
+    public-key: eV6ewGF7oTHf2pTQHKYvwJt-vU8hUC-1CjiUl20HtXE
+    short-id: 4000cdda6278d236
+- name: '🇱🇹[Bomzh]Lithuania #1'
+  type: vless
+  server: 162afct.lt2.h1clayd.click
+  port: 443
+  uuid: 1fc053ed-e9e8-49f2-b7c1-fde68d722dff
+  udp: true
+  flow: xtls-rprx-vision-udp443
+  tls: true
+  servername: 162afct.lt2.h1clayd.click
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: y_pzv7NPwU8d4gAC3r6f6FZN5vFmaKJK9YPEGOjSYB0
+    short-id: 51e7ad7303dba560
 - name: '🇲🇽[Bomzh]Mexico #1'
   type: trojan
   server: mx001.zestapp778.com
@@ -199,13 +176,31 @@ proxies:
   udp: true
   sni: mx001.zestapp778.com
   client-fingerprint: chrome
-- name: '🇵🇭[Bomzh]Philippines #1'
-  type: trojan
-  server: ph001.zestapp778.com
-  port: 46298
-  password: 5t6i121em5lkmsmk
+- name: '🇳🇱[Bomzh]Netherlands #1'
+  type: vless
+  server: 213.108.21.173
+  port: 443
+  uuid: c1fdf1e6-6370-4bad-a866-f80f27f5e785
   udp: true
-  client-fingerprint: chrome
+  flow: xtls-rprx-vision-udp443
+  tls: true
+  servername: nl1.kids-games.ru
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: oSbyJBoI2JTEva2ks51kmUCA7z-iFUcoGYCk-ciEaDU
+    short-id: ''
+- name: '🇵🇱[Bomzh]Poland #1'
+  type: vless
+  server: 7194a9t.pl9.h1clayd.click
+  port: 443
+  uuid: f45d3da3-e488-44f8-b554-94131130e2f6
+  udp: true
+  tls: true
+  servername: 7194a9t.pl9.h1clayd.click
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: Nx_8qS7F8ovEMk_3rb9gjFF2x1vOhfgMTa1NVsIweTw
+    short-id: 6bbddc360b1d6f51
 - name: '🇸🇦[Bomzh]Saudi Arabia #1'
   type: vless
   server: 81.208.170.142
@@ -245,15 +240,6 @@ proxies:
   cipher: auto
   udp: true
 - name: '🇰🇷[Bomzh]South Korea #2'
-  type: vless
-  server: 152.69.226.63
-  port: 25555
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-- name: '🇰🇷[Bomzh]South Korea #3'
   type: trojan
   server: kr002.zestapp778.com
   port: 48851
@@ -274,20 +260,10 @@ proxies:
   reality-opts:
     public-key: zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg
     short-id: 41ae8e266bc3346f
-- name: '🇸🇪[Bomzh]Sweden #2'
-  type: vless
-  server: grok.com
-  port: 2083
-  uuid: fc2d811f-3b7d-4706-9f46-d470255ef061
-  udp: true
-  tls: true
-  servername: cdn.config7x.site
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /7x
-    headers:
-      Host: cdn.config7x.site
+- name: '🇨🇭[Bomzh]Switzerland #1'
+  type: http
+  server: 147.161.246.38
+  port: 11107
 - name: '🇹🇷[Bomzh]Turkey #1'
   type: vmess
   server: free.ertebatgoostar.ir
@@ -331,48 +307,54 @@ proxies:
     public-key: zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg
     short-id: 41ae8e266bc3346f
 - name: '🇺🇸[Bomzh]United States #4'
-  type: vless
-  server: us.uu.l90909l.vip
-  port: 2096
-  uuid: ade24fdb-ad4d-4073-869d-aed575c8e7fe
+  type: vmess
+  server: 104.17.147.222
+  port: 80
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
-  servername: id.vk.com
-  client-fingerprint: safari
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: ''
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless-grpc-reality
-- name: '🇺🇸[Bomzh]United States #5'
-  type: trojan
-  server: 199.68.156.121
-  port: 2087
-  password: 7bpe9s002exll38s
-  udp: true
-  sni: nexoshop.netvia.ir
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /wss
-    headers:
-      Host: nexoshop.netvia.ir
-- name: '🇺🇸[Bomzh]United States #6'
-  type: vless
-  server: opener-calcine.video-streams.org
-  port: 443
-  uuid: e0d6cafb-cb54-4057-9cb1-d81146a89733
-  udp: true
-  tls: true
-  servername: opener-calcine.video-streams.org
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /ws
     headers:
-      Host: opener-calcine.video-streams.org
+      Host: vmess.lbw666.dpdns.org
+- name: '🇺🇸[Bomzh]United States #5'
+  type: vmess
+  server: cf.0sm.com
+  port: 80
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: vmess.lbw666.dpdns.org
+- name: '🇺🇸[Bomzh]United States #6'
+  type: ss
+  server: 2.56.124.123
+  port: 1080
+  cipher: chacha20-ietf-poly1305
+  password: 51_ydomD0FhsOWX3Y1lULA
+  udp: true
 - name: '🇺🇸[Bomzh]United States #7'
+  type: ss
+  server: mm.good2026.com
+  port: 12961
+  cipher: aes-128-gcm
+  password: 2f0c7e37-2534-48dc-9615-d85ae800c41f
+  udp: true
+- name: '🇺🇸[Bomzh]United States #8'
+  type: anytls
+  server: 194.113.194.231
+  port: 1443
+  password: b652305a-0c63-4527-8cb3-0ea582076124
+  udp: true
+  sni: ny.freeguard.org
+  client-fingerprint: chrome
+- name: '🇺🇸[Bomzh]United States #9'
   type: vmess
   server: 172.67.187.145
   port: 80
@@ -385,6 +367,19 @@ proxies:
     path: /ws
     headers:
       Host: vmess.lbw666.dpdns.org
+- name: '🌐[Bomzh]Unknown #1'
+  type: vmess
+  server: www.gptcloudai.com
+  port: 443
+  uuid: e70a5b70-f63c-4450-af8b-94990cdf80c0
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /truth
 proxy-groups:
 - name: PROXY
   type: select
@@ -394,10 +389,7 @@ proxy-groups:
   - '🇨🇦[Bomzh]Canada #1'
   - '🇨🇳[Bomzh]China #1'
   - '🇫🇮[Bomzh]Finland #1'
-  - '🇫🇮[Bomzh]Finland #2'
-  - '🇫🇮[Bomzh]Finland #3'
   - '🇫🇷[Bomzh]France #1'
-  - '🇫🇷[Bomzh]France #2'
   - '🇩🇪[Bomzh]Germany #1'
   - '🇩🇪[Bomzh]Germany #2'
   - '🇩🇪[Bomzh]Germany #3'
@@ -406,17 +398,18 @@ proxy-groups:
   - '🇭🇰[Bomzh]Hong Kong #1'
   - '🇭🇰[Bomzh]Hong Kong #2'
   - '🇭🇰[Bomzh]Hong Kong #3'
-  - '🇭🇰[Bomzh]Hong Kong #4'
-  - '🇮🇳[Bomzh]India #1'
+  - '🇯🇵[Bomzh]Japan #1'
+  - '🇰🇿[Bomzh]Kazakhstan #1'
+  - '🇱🇹[Bomzh]Lithuania #1'
   - '🇲🇽[Bomzh]Mexico #1'
-  - '🇵🇭[Bomzh]Philippines #1'
+  - '🇳🇱[Bomzh]Netherlands #1'
+  - '🇵🇱[Bomzh]Poland #1'
   - '🇸🇦[Bomzh]Saudi Arabia #1'
   - '🇸🇦[Bomzh]Saudi Arabia #2'
   - '🇰🇷[Bomzh]South Korea #1'
   - '🇰🇷[Bomzh]South Korea #2'
-  - '🇰🇷[Bomzh]South Korea #3'
   - '🇸🇪[Bomzh]Sweden #1'
-  - '🇸🇪[Bomzh]Sweden #2'
+  - '🇨🇭[Bomzh]Switzerland #1'
   - '🇹🇷[Bomzh]Turkey #1'
   - '🇦🇪[Bomzh]United Arab Emirates #1'
   - '🇺🇸[Bomzh]United States #1'
@@ -426,6 +419,9 @@ proxy-groups:
   - '🇺🇸[Bomzh]United States #5'
   - '🇺🇸[Bomzh]United States #6'
   - '🇺🇸[Bomzh]United States #7'
+  - '🇺🇸[Bomzh]United States #8'
+  - '🇺🇸[Bomzh]United States #9'
+  - '🌐[Bomzh]Unknown #1'
 - name: AUTO
   type: url-test
   proxies:
@@ -433,10 +429,7 @@ proxy-groups:
   - '🇨🇦[Bomzh]Canada #1'
   - '🇨🇳[Bomzh]China #1'
   - '🇫🇮[Bomzh]Finland #1'
-  - '🇫🇮[Bomzh]Finland #2'
-  - '🇫🇮[Bomzh]Finland #3'
   - '🇫🇷[Bomzh]France #1'
-  - '🇫🇷[Bomzh]France #2'
   - '🇩🇪[Bomzh]Germany #1'
   - '🇩🇪[Bomzh]Germany #2'
   - '🇩🇪[Bomzh]Germany #3'
@@ -445,17 +438,18 @@ proxy-groups:
   - '🇭🇰[Bomzh]Hong Kong #1'
   - '🇭🇰[Bomzh]Hong Kong #2'
   - '🇭🇰[Bomzh]Hong Kong #3'
-  - '🇭🇰[Bomzh]Hong Kong #4'
-  - '🇮🇳[Bomzh]India #1'
+  - '🇯🇵[Bomzh]Japan #1'
+  - '🇰🇿[Bomzh]Kazakhstan #1'
+  - '🇱🇹[Bomzh]Lithuania #1'
   - '🇲🇽[Bomzh]Mexico #1'
-  - '🇵🇭[Bomzh]Philippines #1'
+  - '🇳🇱[Bomzh]Netherlands #1'
+  - '🇵🇱[Bomzh]Poland #1'
   - '🇸🇦[Bomzh]Saudi Arabia #1'
   - '🇸🇦[Bomzh]Saudi Arabia #2'
   - '🇰🇷[Bomzh]South Korea #1'
   - '🇰🇷[Bomzh]South Korea #2'
-  - '🇰🇷[Bomzh]South Korea #3'
   - '🇸🇪[Bomzh]Sweden #1'
-  - '🇸🇪[Bomzh]Sweden #2'
+  - '🇨🇭[Bomzh]Switzerland #1'
   - '🇹🇷[Bomzh]Turkey #1'
   - '🇦🇪[Bomzh]United Arab Emirates #1'
   - '🇺🇸[Bomzh]United States #1'
@@ -465,6 +459,9 @@ proxy-groups:
   - '🇺🇸[Bomzh]United States #5'
   - '🇺🇸[Bomzh]United States #6'
   - '🇺🇸[Bomzh]United States #7'
+  - '🇺🇸[Bomzh]United States #8'
+  - '🇺🇸[Bomzh]United States #9'
+  - '🌐[Bomzh]Unknown #1'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
